@@ -1,0 +1,13 @@
+.imageContainer {
+    position: relative;
+    width: 1000px; /* Adjust based on your image size */
+    height: 1000px; /* Adjust based on your image size */
+  }
+
+  .imageLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
