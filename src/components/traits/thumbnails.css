@@ -1,11 +1,12 @@
 .Container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     gap: 10px;
+    width: 250px;
   }
 
   .Thumbnail {
-    width: 100px; /* Adjust based on your desired thumbnail size */
+    width: 50px; /* Adjust based on your desired thumbnail size */
     height: auto;
     cursor: pointer;
     border: 1px solid grey;

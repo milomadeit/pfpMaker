@@ -9,11 +9,13 @@ function MainImage() {
   const bgSrc = traits.background; // this is the base64 string now
   const bodySrc = traits.bodyType;
   const eyeSrc = traits.eyes_eyewear;
+  const hairHatSrc = traits.hair_hats;
 
   return (
     <div className='imageContainer'>
       <img src={bgSrc} alt='' className='imageLayer' />
       <img src={bodySrc} alt='' className='imageLayer' />
+      <img src={hairHatSrc} alt='' className='imageLayer' />
       <img src={eyeSrc} alt='' className='imageLayer' />
       {/* ... other trait layers */}
     </div>

@@ -1,7 +1,12 @@
 .imageContainer {
-    position: relative;
-    width: 1000px; /* Adjust based on your image size */
-    height: 1000px; /* Adjust based on your image size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    bottom: 150px;
+    top: 50px;
+    width: 300px; /* Adjust based on your image size */
+    height: 300px; /* Adjust based on your image size */
   }
 
   .imageLayer {
