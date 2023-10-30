@@ -13,12 +13,24 @@ function App() {
     <div className='App'>
       {/* Trait selection components */}
       <div className='traitsMaster'>
-        <Backgrounds />
-        <BodyType />
-        <Eyes />
-        <HairHats />
-        <Outfits />
-        <Accessories />
+        <section className='Sections'>
+          <Backgrounds />
+        </section>
+        <section className='Sections'>
+          <BodyType />
+        </section>
+        <section className='Sections'>
+          <Eyes />
+        </section>
+        <section className='Sections'>
+          <HairHats />
+        </section>
+        <section className='Sections'>
+          <Outfits />
+        </section>
+        <section className='Sections'>
+          <Accessories />
+        </section>
       </div>
 
       {/* Main Image Display */}

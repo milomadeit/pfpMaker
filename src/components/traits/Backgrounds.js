@@ -15,10 +15,6 @@ function Backgrounds() {
   // Assuming you have images named 'bg1.png', 'bg2.png', etc.
   const backgrounds = [Concrete, Lavender, Mint, OrangeCream, Peach, Sky]; // Add more as needed
 
-  const handleBackgroundSelect = (bg) => {
-    dispatch(setBackground(bg));
-  };
-
   return (
     <div className='Container'>
       {backgrounds.map((bg, index) => (
@@ -27,7 +23,7 @@ function Backgrounds() {
           src={bg}
           alt={`${bg} thumbnail`}
           className='Thumbnail'
-          onClick={() => handleBackgroundSelect(bg)}
+          onClick={() => dispatch(setBackground(bg))}
         />
       ))}
     </div>

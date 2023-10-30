@@ -43,10 +43,6 @@ function Eyes() {
     Undead,
   ];
 
-  const handleEyeSelect = (eyes) => {
-    dispatch(setEyes(eyes));
-  };
-
   return (
     <div className='Container'>
       {eyeTypes.map((eyes, index) => (
@@ -55,7 +51,7 @@ function Eyes() {
           src={eyes}
           alt={`${eyes} thumbnail`}
           className='Thumbnail'
-          onClick={() => handleEyeSelect(eyes)}
+          onClick={() => dispatch(setEyes(eyes))}
         />
       ))}
     </div>
