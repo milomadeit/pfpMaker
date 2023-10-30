@@ -9,12 +9,14 @@ import GalacticPuke from "../../assets/Accessories/GalacticPuke.png";
 import GrandpasPipe from "../../assets/Accessories/GrandpasPipe.png";
 import LongBeard from "../../assets/Accessories/LongBeard.png";
 import MoustacheBeard from "../../assets/Accessories/MoustacheBeard.png";
+import None from "../../assets/Accessories/None.png";
 import RainbowPuke from "../../assets/Accessories/RainbowPuke.png";
 
 function Accessories() {
   const dispatch = useDispatch();
 
   const accessoryType = [
+    None,
     BlueLasers,
     ChinStrap,
     DestroyerLasers,

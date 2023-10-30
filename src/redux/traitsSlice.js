@@ -2,18 +2,18 @@ import { createSlice } from "@reduxjs/toolkit";
 import Sky from "../assets/Background/OrangeCream.png";
 import Monke from "../assets/Body/Monke.png";
 import Undead from "../assets/Eyes+Eyewear/Undead.png";
-import BackwardsRainbowCap from "../assets/Hair+Hats/BackwardsRainbowCap.png";
-import BlackSuit from "../assets/Outfits/BlackSuit.png";
-import RainbowPuke from "../assets/Accessories/RainbowPuke.png";
+import NoHat from "../assets/Hair+Hats/NoHat.png";
+import NoOutfit from "../assets/Outfits/NoOutfit.png";
+import None from "../assets/Accessories/None.png";
 export const traitsSlice = createSlice({
   name: "traits",
   initialState: {
     background: Sky,
     bodyType: Monke,
     eyes_eyewear: Undead,
-    hair_hats: BackwardsRainbowCap,
-    outfits: BlackSuit,
-    accessories: RainbowPuke,
+    hair_hats: NoHat,
+    outfits: NoOutfit,
+    accessories: None,
   },
   reducers: {
     setBackground: (state, action) => {

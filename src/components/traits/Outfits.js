@@ -11,11 +11,30 @@ import FireTee from "../../assets/Outfits/FireTee.png";
 import FroggySuit from "../../assets/Outfits/FroggySuit.png";
 import IcyTee from "../../assets/Outfits/IcyTee.png";
 import LongTrench from "../../assets/Outfits/LongTrench.png";
+import LoveTank from "../../assets/Outfits/LoveTank.png";
+import MorphSuit from "../../assets/Outfits/MorphSuit.png";
+import NoOutfit from "../../assets/Outfits/NoOutfit.png";
+import OrangeJacket from "../../assets/Outfits/OrangeJacket.png";
+import Parka from "../../assets/Outfits/Parka.png";
+import PinkJumpsuit from "../../assets/Outfits/PinkJumpsuit.png";
+import PinkLoveHoodie from "../../assets/Outfits/PinkLoveHoodie.png";
+import RacerSuitBlue from "../../assets/Outfits/RacerSuitBlue.png";
+import Raptor from "../../assets/Outfits/Raptor.png";
+import RedJumper from "../../assets/Outfits/RedJumper.png";
+import RedRexSuit from "../../assets/Outfits/RedRexSuit.png";
+import SkullHoodie from "../../assets/Outfits/SkullHoodie.png";
+import Slatsuki from "../../assets/Outfits/Slatsuki.png";
+import SummerTank from "../../assets/Outfits/SummerTank.png";
+import TechHoodie from "../../assets/Outfits/TechHoodie.png";
+import TechSuit from "../../assets/Outfits/TechSuit.png";
+import WashedDenim from "../../assets/Outfits/WashedDenim.png";
+import WhiteTux from "../../assets/Outfits/WhiteTux.png";
 
 function Outfits() {
   const dispatch = useDispatch();
 
   const outfitType = [
+    NoOutfit,
     AmongUHoodie,
     BlackSuit,
     BlueDenim,
@@ -24,6 +43,23 @@ function Outfits() {
     FroggySuit,
     IcyTee,
     LongTrench,
+    LoveTank,
+    MorphSuit,
+    OrangeJacket,
+    Parka,
+    PinkJumpsuit,
+    PinkLoveHoodie,
+    RacerSuitBlue,
+    Raptor,
+    RedJumper,
+    RedRexSuit,
+    SkullHoodie,
+    Slatsuki,
+    SummerTank,
+    TechHoodie,
+    TechSuit,
+    WashedDenim,
+    WhiteTux,
   ];
 
   return (

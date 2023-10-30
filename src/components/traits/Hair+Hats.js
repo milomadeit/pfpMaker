@@ -19,6 +19,7 @@ import Hardhat from "../../assets/Hair+Hats/Hardhat.png";
 import Horn from "../../assets/Hair+Hats/Horn.png";
 import JokinPurp from "../../assets/Hair+Hats/JokinPurp.png";
 import LongBlonde from "../../assets/Hair+Hats/LongBlonde.png";
+import NoHat from "../../assets/Hair+Hats/NoHat.png";
 import OrangeFro from "../../assets/Hair+Hats/OrangeFro.png";
 import PilotCap from "../../assets/Hair+Hats/PilotCap.png";
 import PurpleShortHair from "../../assets/Hair+Hats/PurpleShortHair.png";
@@ -33,6 +34,7 @@ function HairHats() {
   const dispatch = useDispatch();
 
   const hairHatTypes = [
+    NoHat,
     BackwardsRainbowCap,
     BasicFedora,
     BlueBeret,
@@ -62,7 +64,6 @@ function HairHats() {
     Xcap,
   ];
 
-  
   return (
     <div className='Container'>
       {hairHatTypes.map((hairHat, index) => (

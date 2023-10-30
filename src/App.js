@@ -1,5 +1,5 @@
 import React from "react";
-import MainImage from "./components/MainImage";
+import MainImage from "./components/MainImage/MainImage";
 import Backgrounds from "./components/traits/Backgrounds";
 import BodyType from "./components/traits/Body";
 import Eyes from "./components/traits/Eyes";

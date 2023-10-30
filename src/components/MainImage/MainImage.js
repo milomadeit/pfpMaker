@@ -21,6 +21,7 @@ function MainImage() {
       <img src={eyeSrc} alt='' className='imageLayer' />
       <img src={outfitSrc} alt='' className='imageLayer' />
       <img src={accessorySrc} alt='' className='imageLayer' />
+      
       {/* ... other trait layers */}
     </div>
   );
