@@ -62,10 +62,7 @@ function HairHats() {
     Xcap,
   ];
 
-  const handleHairHatSelect = (hairHat) => {
-    dispatch(setHairHats(hairHat));
-  };
-
+  
   return (
     <div className='Container'>
       {hairHatTypes.map((hairHat, index) => (
@@ -74,7 +71,7 @@ function HairHats() {
           src={hairHat}
           alt={`${hairHat} thumbnail`}
           className='Thumbnail'
-          onClick={() => handleHairHatSelect(hairHat)}
+          onClick={() => dispatch(setHairHats(hairHat))}
         />
       ))}
     </div>

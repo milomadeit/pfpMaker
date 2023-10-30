@@ -31,10 +31,6 @@ function BodyType() {
     Zombie,
   ];
 
-  const handleBodyTypeSelect = (body) => {
-    dispatch(setBodyType(body));
-  };
-
   return (
     <div className='Container'>
       {bodyTypes.map((bt, index) => (
@@ -43,7 +39,7 @@ function BodyType() {
           src={bt}
           alt={`${bt} thumbnail`}
           className='Thumbnail'
-          onClick={() => handleBodyTypeSelect(bt)}
+          onClick={() => dispatch(setBodyType(bt))}
         />
       ))}
     </div>

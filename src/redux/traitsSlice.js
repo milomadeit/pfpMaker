@@ -3,6 +3,8 @@ import Sky from "../assets/Background/OrangeCream.png";
 import Monke from "../assets/Body/Monke.png";
 import Undead from "../assets/Eyes+Eyewear/Undead.png";
 import BackwardsRainbowCap from "../assets/Hair+Hats/BackwardsRainbowCap.png";
+import BlackSuit from "../assets/Outfits/BlackSuit.png";
+import RainbowPuke from "../assets/Accessories/RainbowPuke.png";
 export const traitsSlice = createSlice({
   name: "traits",
   initialState: {
@@ -10,8 +12,8 @@ export const traitsSlice = createSlice({
     bodyType: Monke,
     eyes_eyewear: Undead,
     hair_hats: BackwardsRainbowCap,
-    outfits: "default",
-    accessories: "default",
+    outfits: BlackSuit,
+    accessories: RainbowPuke,
   },
   reducers: {
     setBackground: (state, action) => {

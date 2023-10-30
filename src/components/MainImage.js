@@ -10,6 +10,8 @@ function MainImage() {
   const bodySrc = traits.bodyType;
   const eyeSrc = traits.eyes_eyewear;
   const hairHatSrc = traits.hair_hats;
+  const outfitSrc = traits.outfits;
+  const accessorySrc = traits.accessories;
 
   return (
     <div className='imageContainer'>
@@ -17,6 +19,8 @@ function MainImage() {
       <img src={bodySrc} alt='' className='imageLayer' />
       <img src={hairHatSrc} alt='' className='imageLayer' />
       <img src={eyeSrc} alt='' className='imageLayer' />
+      <img src={outfitSrc} alt='' className='imageLayer' />
+      <img src={accessorySrc} alt='' className='imageLayer' />
       {/* ... other trait layers */}
     </div>
   );
