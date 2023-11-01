@@ -1,27 +1,27 @@
 .App {
-    display: flex;
-    flex-direction: row; /* This line is crucial, it should be 'row' */
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row; /* This line is crucial, it should be 'row' */
+  justify-content: space-between;
 
-    padding: 20px; /* Optional: for some space around the edges */
-  }
+  padding: 20px; /* Optional: for some space around the edges */
+}
 
-  .traitsMaster {
-    display: flex;
-    flex-direction: column; /* Stack trait components vertically */
-    width: 300px; /* Adjust based on your preference */
-    margin-right: 20px; /* Optional: for some space between the traits and the main image */
-  }
+.traitsMaster {
+  display: flex;
+  flex-direction: column; /* Stack trait components vertically */
+  width: 300px; /* Adjust based on your preference */
+  margin-right: 20px; /* Optional: for some space between the traits and the main image */
+}
 
-  .mainImage {
-    flex-grow: 1; /* Allows this section to take up the remaining space */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: sticky;
-    top: 10px
-  }
+.mainImage {
+  flex-grow: 1; /* Allows this section to take up the remaining space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 10px
+}
 
-  .Sections {
-    margin-top: 10px;
-  }
+.Sections {
+  margin-top: 10px;
+}
