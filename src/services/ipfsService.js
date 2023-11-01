@@ -17,13 +17,10 @@ export const saveToIPFS = async (blob) => {
     body: formData,
   });
 
-  console.log("Authorization Header:", "Basic " + encodedCredentials);
-
-  console.log("IPFS Response:", response);
   if (!response.ok) {
     throw new Error(`Failed to save to IPFS: ${response.statusText}`);
   }
 
   const data = await response.json();
-  return data.Hash; // This is the CID for your file on IPFS.
+  return data.Hash; // This is the CID for the file on IPFS.
 };

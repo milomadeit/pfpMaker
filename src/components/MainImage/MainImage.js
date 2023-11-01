@@ -49,12 +49,13 @@ function MainImage() {
   };
 
   const saveImage = async () => {
-    const canvas = canvasRef.current;
-    const blob = await new Promise((resolve) => canvas.toBlob(resolve));
+    // upload up IPFS and get back CID
+    // const canvas = canvasRef.current;
+    // const blob = await new Promise((resolve) => canvas.toBlob(resolve));
     try {
-      const cid = await saveToIPFS(blob);
+      // const cid = await saveToIPFS(blob);
       saveImageToDesktop();
-      console.log(`Image saved to Desktop and IPFS with CID: ${cid}`);
+      // console.log(`Image saved to Desktop and IPFS with CID: ${cid}`);
       // Proceed to NFT minting or other steps with the CID
     } catch (error) {
       console.error("Error saving to IPFS:", error);
@@ -65,8 +66,8 @@ function MainImage() {
     <div className='imageContainer'>
       <canvas
         ref={canvasRef}
-        width='500'
-        height='500'
+        width='1000'
+        height='1000'
         style={{ display: "none" }}
       ></canvas>
       <div className='imageWrapper'>
