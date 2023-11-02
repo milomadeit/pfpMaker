@@ -1,7 +1,8 @@
 import React from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setEyes } from "../../redux/traitsSlice";
-import "./thumbnails.css";
+import "./traits.css";
 import ThreeDGlasses from "../../assets/Eyes+Eyewear/3DGlasses.png";
 import BikerGoggles from "../../assets/Eyes+Eyewear/BikerGoggles.png";
 import CyclopsEye from "../../assets/Eyes+Eyewear/CyclopsEye.png";
@@ -22,6 +23,7 @@ import Undead from "../../assets/Eyes+Eyewear/Undead.png";
 
 function Eyes() {
   const dispatch = useDispatch();
+  const [isVisible, setIsVisible] = useState(false);
 
   const eyeTypes = [
     ThreeDGlasses,
@@ -44,16 +46,23 @@ function Eyes() {
   ];
 
   return (
-    <div className='Container'>
-      {eyeTypes.map((eyes, index) => (
-        <img
-          key={index}
-          src={eyes}
-          alt={`${eyes} thumbnail`}
-          className='Thumbnail'
-          onClick={() => dispatch(setEyes(eyes))}
-        />
-      ))}
+    <div>
+      <h2 className='traitName' onClick={() => setIsVisible(!isVisible)}>
+        Eyes+Eyewear
+      </h2>
+      {isVisible && (
+        <div className='Container'>
+          {eyeTypes.map((eyes, index) => (
+            <img
+              key={index}
+              src={eyes}
+              alt={`${eyes} thumbnail`}
+              className='Thumbnail'
+              onClick={() => dispatch(setEyes(eyes))}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

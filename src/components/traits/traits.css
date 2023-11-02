@@ -2,7 +2,8 @@
     display: flex;
     flex-wrap:wrap;
     gap: 5px;
-    width: 250px;
+    width: 200px;
+    margin-left: 25px;
   }
 
   .Thumbnail {
@@ -16,4 +17,16 @@
   .Thumbnail:hover {
     border-color: #007BFF; /* Change to your desired highlight color */
     box-shadow: 2px 2px 2px #007BFF; ;
+  }
+
+  .traitName {
+    font-family: monospace, monospace;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 25px;
+  }
+
+  .traitName:hover {
+    color:#007BFF;
+    cursor: pointer;
   }

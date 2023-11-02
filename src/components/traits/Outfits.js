@@ -1,8 +1,8 @@
 import React from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setOutfits } from "../../redux/traitsSlice";
-import "./thumbnails.css";
-
+import "./traits.css";
 import AmongUHoodie from "../../assets/Outfits/AmongUHoodie.png";
 import BlackSuit from "../../assets/Outfits/BlackSuit.png";
 import BlueDenim from "../../assets/Outfits/BlueDenim.png";
@@ -32,6 +32,7 @@ import WhiteTux from "../../assets/Outfits/WhiteTux.png";
 
 function Outfits() {
   const dispatch = useDispatch();
+  const [isVisible, setIsVisible] = useState(false);
 
   const outfitType = [
     NoOutfit,
@@ -63,16 +64,23 @@ function Outfits() {
   ];
 
   return (
-    <div className='Container'>
-      {outfitType.map((outfit, index) => (
-        <img
-          key={index}
-          src={outfit}
-          alt={`${outfit} thumbnail`}
-          className='Thumbnail'
-          onClick={() => dispatch(setOutfits(outfit))}
-        />
-      ))}
+    <div>
+      <h2 className='traitName' onClick={() => setIsVisible(!isVisible)}>
+        Outfits
+      </h2>
+      {isVisible && (
+        <div className='Container'>
+          {outfitType.map((outfit, index) => (
+            <img
+              key={index}
+              src={outfit}
+              alt={`${outfit} thumbnail`}
+              className='Thumbnail'
+              onClick={() => dispatch(setOutfits(outfit))}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

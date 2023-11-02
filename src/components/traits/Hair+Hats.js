@@ -1,6 +1,8 @@
 import React from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setHairHats } from "../../redux/traitsSlice";
+import "./traits.css";
 import BackwardsRainbowCap from "../../assets/Hair+Hats/BackwardsRainbowCap.png";
 import BasicFedora from "../../assets/Hair+Hats/BasicFedora.png";
 import BlueBeret from "../../assets/Hair+Hats/BlueBeret.png";
@@ -32,6 +34,7 @@ import Xcap from "../../assets/Hair+Hats/Xcap.png";
 
 function HairHats() {
   const dispatch = useDispatch();
+  const [isVisible, setIsVisible] = useState(false);
 
   const hairHatTypes = [
     NoHat,
@@ -65,17 +68,26 @@ function HairHats() {
   ];
 
   return (
-    <div className='Container'>
-      {hairHatTypes.map((hairHat, index) => (
-        <img
-          key={index}
-          src={hairHat}
-          alt={`${hairHat} thumbnail`}
-          className='Thumbnail'
-          onClick={() => dispatch(setHairHats(hairHat))}
-        />
-      ))}
+    <div>
+      <h2 className='traitName' onClick={() => setIsVisible(!isVisible)}>
+        Hair+Hats
+      </h2>
+      {isVisible && (
+        <div className='Container'>
+        {hairHatTypes.map((hairHat, index) => (
+          <img
+            key={index}
+            src={hairHat}
+            alt={`${hairHat} thumbnail`}
+            className='Thumbnail'
+            onClick={() => dispatch(setHairHats(hairHat))}
+          />
+        ))}
+      </div>
+
+      )}
     </div>
+
   );
 }
 

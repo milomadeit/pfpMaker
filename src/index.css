@@ -11,15 +11,17 @@
   flex-direction: column; /* Stack trait components vertically */
   width: 300px; /* Adjust based on your preference */
   margin-right: 20px; /* Optional: for some space between the traits and the main image */
+  z-index: 0,
 }
 
 .mainImage {
-  flex-grow: 1; /* Allows this section to take up the remaining space */
+   /* Allows this section to take up the remaining space */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: sticky;
-  top: 10px
+  justify-content:flex-end;
+  align-items:baseline;
+  margin-right: 300px;
+  margin-top: 100px;
+  bottom: 100px;
 }
 
 .Sections {

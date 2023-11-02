@@ -1,7 +1,8 @@
 import React from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setBodyType } from "../../redux/traitsSlice";
-import "./thumbnails.css";
+import "./traits.css";
 import Basic1 from "../../assets/Body/Basic1.png";
 import Basic2 from "../../assets/Body/Basic2.png";
 import Bear from "../../assets/Body/Bear.png";
@@ -16,6 +17,7 @@ import Zombie from "../../assets/Body/Zombie.png";
 
 function BodyType() {
   const dispatch = useDispatch();
+  const [isVisible, setIsVisible] = useState(false);
 
   const bodyTypes = [
     Basic1,
@@ -32,16 +34,23 @@ function BodyType() {
   ];
 
   return (
-    <div className='Container'>
-      {bodyTypes.map((bt, index) => (
-        <img
-          key={index}
-          src={bt}
-          alt={`${bt} thumbnail`}
-          className='Thumbnail'
-          onClick={() => dispatch(setBodyType(bt))}
-        />
-      ))}
+    <div>
+      <h2 className='traitName' onClick={() => setIsVisible(!isVisible)}>
+        BodyTypes
+      </h2>
+      {isVisible && (
+        <div className='Container'>
+          {bodyTypes.map((bt, index) => (
+            <img
+              key={index}
+              src={bt}
+              alt={`${bt} thumbnail`}
+              className='Thumbnail'
+              onClick={() => dispatch(setBodyType(bt))}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
